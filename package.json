@@ -1,0 +1,27 @@
+{
+  "name": "be_backoffice_loan",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/opolja888/be_backoffice_loan.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/opolja888/be_backoffice_loan/issues"
+  },
+  "homepage": "https://github.com/opolja888/be_backoffice_loan#readme",
+  "description": "",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "dotenv": "^17.2.1",
+    "express": "^5.1.0",
+    "pg": "^8.16.3",
+    "typeorm": "^0.3.26"
+  }
+}
