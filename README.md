@@ -1,4 +1,4 @@
-# BE Backoffice Loan
+# 📘 BE Backoffice Loan
 
 Backend service พัฒนาด้วย **Node.js (Express)** + **PostgreSQL** + **TypeORM**  
 โครงสร้างแบบ feature-first แยกเป็นโมดูล ลด conflict เวลาทำงานเป็นทีม
@@ -18,6 +18,8 @@ Backend service พัฒนาด้วย **Node.js (Express)** + **PostgreSQL
 ---
 
 ## 📂 Project Structure
+
+```bash
 src/
   config/              # การตั้งค่า (db, env, etc.)
   middlewares/         # middleware กลาง เช่น error-handler
