@@ -4,7 +4,7 @@ import { env } from './config/env.js';
 
 async function bootstrap() {
     await AppDataSource.initialize();
-    const app = createApp();
+    const app = await createApp();
     app.listen(env.PORT, () => {
         console.log(`Server running on http://localhost:${env.PORT}`);
     });

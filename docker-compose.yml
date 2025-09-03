@@ -1,0 +1,37 @@
+services:
+  postgres:
+    image: postgres:latest
+    container_name: postgres_loan
+    environment:
+      POSTGRES_USER: ${DB_USER}
+      POSTGRES_PASSWORD: ${DB_PASS}
+      POSTGRES_DB: ${DB_NAME}
+    volumes:
+      - volume_loan:/var/lib/postgresql/data
+    ports:
+      - "5432:5432"
+    networks:
+      - network_loan
+
+  pgadmin:
+    image: dpage/pgadmin4:latest
+    container_name: pgadmin_loan
+    environment:
+      PGADMIN_DEFAULT_EMAIL: ${PGADMIN_DEFAULT_EMAIL}
+      PGADMIN_DEFAULT_PASSWORD: ${PGADMIN_DEFAULT_PASSWORD}
+    ports:
+      - "5050:80"
+    depends_on:
+      - postgres
+    networks:
+      - network_loan
+
+volumes:
+  volume_loan:
+    name: volume_loan
+    driver: local
+
+networks:
+  network_loan:
+    name: network_loan
+    driver: bridge
