@@ -18,3 +18,17 @@ Backend service พัฒนาด้วย **Node.js (Express)** + **PostgreSQL
 ---
 
 ## 📂 Project Structure
+src/
+  config/              # การตั้งค่า (db, env, etc.)
+  middlewares/         # middleware กลาง เช่น error-handler
+  loaders/             # auto loader เช่น routes
+  modules/             # แต่ละ feature ของระบบ
+    user/
+      user.schema.js
+      user.controller.js
+      user.service.js
+      user.routes.js
+      user.validations.js
+  utils/               # helper functions ใช้ซ้ำ
+  app.js               # สร้าง express app
+  server.js            # entry point, init db แล้ว start server
