@@ -2,7 +2,7 @@ import express from 'express';
 import cors from 'cors';
 import helmet from 'helmet';
 // import { requestLogger } from './middlewares/request-logger.js';
-// import { errorHandler } from './middlewares/error-handler.js';
+import { errorHandler } from './middlewares/error-handler.js';
 import { loadModuleRoutes } from './loaders/routes.loader.js';
 
 export async function createApp() {
@@ -13,6 +13,6 @@ export async function createApp() {
     // app.use(requestLogger);
 
     await loadModuleRoutes(app);
-    // app.use(errorHandler);
+    app.use(errorHandler);
     return app;
 }

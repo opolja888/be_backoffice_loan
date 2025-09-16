@@ -19,3 +19,5 @@ ormconfig.ts
 
 .DS_Store
 Thumbs.db
+
+.vscode
